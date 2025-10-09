@@ -1,6 +1,8 @@
 # ensismoebius-ProjetoTurmaB-Consessionaria
 MiguelBrunholiDev-> Miguel Brunholi  
 
+Alexandre-OS -> Lucas Alexandre de Oliveira Silva  
+
 LuizHenrique008 -> Luiz Henrique  
 
 luidgi700777 -> Luidgi Soligueti Morgan  
