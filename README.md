@@ -1,6 +1,7 @@
 # ensismoebius-ProjetoTurmaB-Consessionaria
 MiguelBrunholiDev-> Miguel Brunholi  
 
+TzinnDev-> Tiago Ferraz E Silva  
 Alexandre-OS -> Lucas Alexandre de Oliveira Silva  
 
 LuizHenrique008 -> Luiz Henrique  
