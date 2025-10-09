@@ -1,0 +1,21 @@
+{
+    "name": "concessionaria/projetob",
+    "description": "Projeto de concessionária da Turma B",
+    "type": "project",
+    "require": {
+        "twig/twig": "4.x-dev",
+        "coffeecode/router": "dev-master"
+    },
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Concessionaria\\Projetob\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Grupo B"
+        }
+    ],
+    "minimum-stability": "dev"
+}
