@@ -2,3 +2,4 @@
 
 
 sofiaamorim999->Sofia Amorim Carvalho  
+SamuelVarolloDev1 -> Samuel Varollo  
