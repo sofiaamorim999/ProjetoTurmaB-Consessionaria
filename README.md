@@ -3,6 +3,7 @@ MiguelBrunholiDev-> Miguel Brunholi
 
 LuizHenrique008 -> Luiz Henrique  
 
+luidgi700777 -> Luidgi Soligueti Morgan  
 nicolilima08->Nicoli Lima  
 
 pedrodesouza -> Pedro Santiago de Souza  
