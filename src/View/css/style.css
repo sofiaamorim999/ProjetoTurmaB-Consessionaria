@@ -1,0 +1,73 @@
+#body_showhtml{
+    display: flex;
+    justify-content: center;
+}
+
+#div_showhtml{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(103, 166, 221);
+    margin-top: 5%;
+    width: 35%;
+    height: 80%;
+    border: solid 4px rgb(0, 0, 0);
+    border-radius: 24px;
+}
+
+#header_showhtml{
+    font-size: 180%;
+    text-align: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5%;
+}
+
+#main_showhtml{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 1%;
+    margin-bottom: 9%;
+}
+
+#form_showhtml{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    font-size: 140%;
+}
+
+#form_showhtml label{
+    margin: 3%;
+}
+
+#Nome_cliente{
+    font-size: 87%;
+}
+
+#Email_cliente{
+    font-size: 87%;
+}
+
+#Telefone_cliente{
+    font-size: 87%;
+}
+
+#Mensagem_cliente{
+    font-size: 107%;
+}
+
+#Enviar{
+    margin-top: 6%;
+    font-size: 130%;
+    background-color: rgb(36, 76, 112);
+    color: white;
+    border-radius: 25px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 12%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
