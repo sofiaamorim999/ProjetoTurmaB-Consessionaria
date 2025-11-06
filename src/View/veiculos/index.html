@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
             margin: 0;
         }
 
-        
+
 
         header {
             background: white;
@@ -26,7 +27,8 @@
             padding: 10px 20px;
             width: 100%;
             z-index: 1000;
-            margin-bottom: 30px; /* Espaço entre o header e os cards */
+            margin-bottom: 30px;
+            /* Espaço entre o header e os cards */
         }
 
         .header-container {
@@ -59,11 +61,11 @@
             transition: color 0.3s;
         }
 
-        .navigation ul  a:hover {
+        .navigation ul a:hover {
             color: #667eea;
         }
 
-        .grid { 
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
@@ -119,7 +121,7 @@
 
         .btn-detalhe {
             background: #d3d3d3;
-            color: #333; 
+            color: #333;
         }
 
         .btn-contato {
@@ -127,12 +129,52 @@
             color: #333;
         }
 
-        .btn-detalhe:hover, .btn-contato:hover {
-            background: #808080; /* Cinza escuro ao passar o mouse */
+        .btn-detalhe:hover,
+        .btn-contato:hover,
+        .btn-pesquisa:hover {
+            background: #808080;
+            /* Cinza escuro ao passar o mouse */
             color: white;
+        }
+
+        .buscar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #fff;
+            width: 300px;
+        }
+
+        .frm-busca {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #fff;
+            width: 300px;
+        }
+
+        .input-pesquisa {
+            border: none;
+            outline: none;
+            padding: 8px 10px;
+            flex-grow: 1;
+            font-size: 16px;
+        }
+
+        .btn-pesquisa {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px 10px;
+            color: #333;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -154,10 +196,17 @@
         <div class="grid" id="vehicleGrid"></div>
     </div>
 
+    <br>
+
+    <form class="frm-busca">
+        <input type="search" class="input-pesquisa" placeholder="Pesquisar...">
+        <button type="submit" class="btn-pesquisa">Buscar</button>
+    </form>
+
     <script>
         const veiculos = [
             {
-                Id:1,
+                Id: 1,
                 marca: "Toyota",
                 modelo: "Corolla",
                 preco: 145000,
@@ -206,4 +255,5 @@
         renderizarVeiculos();
     </script>
 </body>
+
 </html>
