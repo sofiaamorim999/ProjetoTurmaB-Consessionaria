@@ -9,5 +9,8 @@ $roteador -> namespace("Concessionaria\Projetob\Controller");
 // rota principal
 $roteador -> group(null);
 $roteador -> get("/", "Principal:inicio");
+$roteador -> get("/register", "AuthController:showRegisterForm");
+$roteador -> post("/register", "AuthController:register");
+$roteador -> get("/login", "AuthController:showLoginForm");
 
 $roteador -> dispatch();

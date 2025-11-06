@@ -1,18 +1,61 @@
 <?php
+
     namespace Concessionaria\Projetob\Controller;
+    use PDO;
+    use Concessionaria\Projetob\Model\Usuario;
 
     class AuthController
 {
-     private \Twig\Environment $ambiente;
-     private \Twig\Loader\FilesystemLoader $carregador;
+
+    private \Twig\Environment $ambiente;
+    private \Twig\Loader\FilesystemLoader $carregador;
 
      public function __construct()
      {
-        $this->carregador = new \Twig\Loader\FilesystemLoader("./src/View");
+        $this->carregador = new \Twig\Loader\FilesystemLoader("./src/View/auth");
  
         $this->ambiente = new \Twig\Environment($this->carregador);
 
      }  
+
+    public function showRegisterForm(){
+       echo $this->ambiente->render("register.html");
+    }
+
+    public function register(){
+        $nome = $_POST['Nome_Usuario'] ?? '';
+        $email = $_POST['Email_Usuario'] ?? '';
+        $senha = $_POST['Senha_Usuario'] ?? '';
+
+    if (empty($nome) || empty($email) || empty($senha)) {
+        echo "Preencha todos os campos.";
+        return;
+    }
+
+     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "E-mail inválido.";
+        return;
+    }
+
+    $conexao = new \PDO("mysql:host=localhost;dbname=PRJ2DS", "Aluno2DS", "SenhaBD2");
+
+    $user = new Usuario($conexao);
+
+    if ($user->existeEmail($email)) {
+        echo "E-mail já cadastrado";
+        return;
+    }
+
+    if ($user->criar($nome, $email, $senha)) {
+        echo "Usuário cadastrado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar usuário.";
+    }
+}
+
+    public function showLoginForm(){
+       echo $this->ambiente->render("login.html");
+    }
 
      public function Logout(){
         session_start();
