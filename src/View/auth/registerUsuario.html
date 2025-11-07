@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="/public/assets/css/auth.css">
+</head>
+<body id="body_register">
+    <div id="div_register">
+        <header id="header_register">
+            <h1>Cadastre-se</h1>
+        </header>
+
+        <main id="main_register">
+            <form id="form_register" action="" method="post">
+                <label for="Nome_Usuario">Nome completo:</label>
+                <input name="Nome_Usuario" type="text" id="nomeUsuarioRegister" placeholder="Seu Nome Completo" autocomplete="name" required>
+
+                <label for="Email_Usuario">Endereço email:</label>
+                <input name="Email_Usuario" type="email" id="emailUsuarioRegister" placeholder="seu@email.com" autocomplete="email" required>
+
+                <label for="Senha_Usuario">Senha:</label>
+                <input name="Senha_Usuario" type="password" id="senhaUsuarioRegister" placeholder="Senha0123" required>
+
+                <input name="EnviarCadastro" type="submit" id="enviarRegister" value="Enviar">
+            </form>
+        </main>
+    </div>
+</body>
+</html>
