@@ -17,5 +17,10 @@ class Principal
     {
         echo $this->ambiente->render("inicio.html");
     }
+
+    public function veiculos()
+    {
+        echo $this->ambiente->render("veiculos/index.html");
+    }
 }
 ?>
