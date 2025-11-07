@@ -93,7 +93,7 @@
      public function Logout(){
         session_start();
         session_destroy();
-        header("Location: login.html");
+        header("Location: http://localhost/ProjetoTurmaB-Consessionaria/login");
         exit;
      }
     
@@ -107,10 +107,10 @@
 
     public function auth_middleware(){
         if(false === $this->is_logged_in()){
-            header("Location: login.html");
+            header("Location: http://localhost/ProjetoTurmaB-Consessionaria/login");
             exit;
         } else{
-            header("Location: inicio.html");
+            header("Location: http://localhost/ProjetoTurmaB-Consessionaria/");
             exit;
         }
      }
