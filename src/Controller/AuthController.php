@@ -32,7 +32,7 @@
         return;
     }
 
-     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "E-mail inválido.";
         return;
     }
@@ -55,6 +55,39 @@
 
     public function showLoginForm(){
        echo $this->ambiente->render("login.html");
+    }
+
+    public function login(){
+        $email = $_POST['Email_Usuario'] ?? '';
+        $senha = $_POST['Senha_Usuario'] ?? '';
+
+        $conexao = new \PDO("mysql:host=localhost;dbname=PRJ2DS", "Aluno2DS", "SenhaBD2");
+        $this->conexao = $conexao;
+
+        $stmt = $this->conexao->prepare("SELECT id, senha FROM usuarios WHERE email = :email");
+        $stmt->bindValue(":email", $email);
+        $stmt->execute();
+
+        $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (empty($email) || empty($senha)) {
+        echo "Preencha todos os campos.";
+        return;
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "E-mail inválido.";
+        return;
+        }
+
+        if($usuario && password_verify($senha, $usuario['senha'])){
+            echo "Senha válida.";
+            session_start();
+            $_SESSION["user_id"] = $usuario['id'];
+        } else {
+            echo "Senha inválida.";
+            return;
+        }
     }
 
      public function Logout(){
