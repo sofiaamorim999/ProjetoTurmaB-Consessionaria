@@ -14,5 +14,7 @@ $roteador -> post("/register", "AuthController:register");
 $roteador -> get("/login", "AuthController:showLoginForm");
 $roteador -> post("/login", "AuthController:login");
 $roteador -> post("/", "AuthController:Logout");
+$roteador -> get("/proposta", "PropostaController:inicio");
+$roteador -> post("/proposta", "PropostaController:enviar");
 
 $roteador -> dispatch();
